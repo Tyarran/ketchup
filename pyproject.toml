@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "ketchup"
+version = "0.1.0"
+description = "Ketchup is a tool for launching your tests in parallel"
+authors = ["Romain Commandé <rcommande@meilleursagents.com>"]
+license = "MIT"
+classifiers = [
+        "Development Status :: 2 - Pre-Alpha",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: MIT License",
+        "Natural Language :: English",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+typer = "^0.4.0"
+PyYAML = "^6.0"
+colorama = "^0.4.4"
+termcolor = "^1.1.0"
+
+[tool.poetry.dev-dependencies]
+black = "^22.1.0"
+
+[tool.poetry.scripts]
+ketchup = 'ketchup.cli:init'
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
